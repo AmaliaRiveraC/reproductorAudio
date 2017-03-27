@@ -1,0 +1,32 @@
+<!DOCTYPE htm>
+<html>
+    <head lang="es">
+        <meta charset="utf-8">
+        <title>Reproductor de Audio</title>
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    </head>
+    <body>
+        <header>
+            <h1 align="center">Reproductor de audio</h1>
+        </header>
+        <section alt="Reproductor de audio">
+            <button id="play" onclick="audioPlay()">Play</button>
+            <button id="adelantar" onclick="audioAdelantar(12)">Adelantar</button>
+            <button id="retroceder" onclick="audioRetroceder(10)">Retroceder</button>
+            <button id="restart" onclick="audioRestart()">&#8635</button>
+            <button id="bajarVol" onclick="bajarVolumen()">Vol -</button>
+            <button id="subirVol" onclick="subirVolumen()">Vol +</button>
+            <button id="stop" onclick="audioStop()">🛑</button>
+            <div>
+                <audio id="audio">
+                    <source src="assets/audio/amywinhouse.mp3.mp3" type="audio/mp3">
+                </audio>
+            </div>
+            <canvas id="canvas" width="500" height="20" oninput="progresoAudio()">
+                canvas not supported
+            </canvas>
+
+        </section>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
